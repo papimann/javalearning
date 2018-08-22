@@ -10,4 +10,5 @@ public class CoursesApp {
 		SpringApplication.run(CoursesApp.class, args);
 	}
 
+	// https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 }
