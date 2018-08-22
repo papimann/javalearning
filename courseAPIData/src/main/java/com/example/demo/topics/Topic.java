@@ -1,4 +1,4 @@
-package courses.topics;
+package com.example.demo.topics;
 
 public class Topic {
 
