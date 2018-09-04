@@ -17,7 +17,7 @@ public class Streams {
 		System.out.println("Merged String: " + mergedString);
 
 		Random random = new Random();
-		random.ints().limit(3).forEach(System.out::println);
+		random.ints().limit(3).sorted().forEach(System.out::println);
 
 		List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
 		// get list of unique squares
