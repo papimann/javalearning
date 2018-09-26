@@ -17,10 +17,10 @@ public class UniqueString {
 
 	public static void main(String[] args) {
 		String str = "abad";
-		System.out.print(isUniqueString(str));
+//		System.out.print(isUniqueString(str));
 		System.out.print(isUniqueBitVectorString(str));
-		System.out.print(uniqueCharactersForLoop(str));
-		System.out.println(uniqueCharactersSorted(str));
+//		System.out.print(uniqueCharactersForLoop(str));
+//		System.out.println(uniqueCharactersSorted(str));
 	}
 
 	/**

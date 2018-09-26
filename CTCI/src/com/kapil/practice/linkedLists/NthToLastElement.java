@@ -16,7 +16,7 @@ public class NthToLastElement {
 	}
 
 	private static void findNthToLastElement(int n, LinkedList<Integer> l) {
-		if (n > l.getSize()) {
+		if (n > l.getSize() || n < 0) {
 			System.out.println("n cannot be more than list size i.e. " + l.getSize());
 			return;
 		}

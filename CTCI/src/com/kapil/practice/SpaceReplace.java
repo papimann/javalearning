@@ -1,7 +1,5 @@
 package com.kapil.practice;
 
-import java.util.LinkedList;
-
 public class SpaceReplace {
 
 	public static void main(String[] args) {
@@ -11,7 +9,6 @@ public class SpaceReplace {
 
 	private static void replaceSpace(String str) {
 		char[] data = str.toCharArray();
-		LinkedList<E>
 		int length = data.length;
 		int spaceCount = 0;
 		for (int i = 0; i < length; i++) {

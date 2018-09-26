@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="courseAPIData/src/main/java"/>
+	<classpathentry kind="src" path="courseAPIData/src/test/java"/>
+	<classpathentry kind="src" path="InterviewPrograms/src"/>
+	<classpathentry kind="src" path="Java 8/src"/>
+	<classpathentry kind="src" path="JavaBrains-SpringBoot/src/main/java"/>
+	<classpathentry kind="lib" path="courseAPIData/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="InterviewPrograms/bin"/>
+</classpath>

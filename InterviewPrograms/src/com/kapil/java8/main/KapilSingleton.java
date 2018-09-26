@@ -1,5 +1,10 @@
 package com.kapil.java8.main;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
 
@@ -76,12 +81,14 @@ public class KapilSingleton implements Serializable, Cloneable {
 			/**
 			 * Serialization
 			 */
-			/*
-			 * ObjectOutputStream out = new ObjectOutputStream(new
-			 * FileOutputStream("file.txt")); out.writeObject(st); out.close(); ObjectInput
-			 * in = new ObjectInputStream(new FileInputStream("file.txt")); st1 =
-			 * (KapilSingleton) in.readObject(); in.close();
-			 */
+
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+			out.writeObject(st);
+			out.close();
+			ObjectInput in = new ObjectInputStream(new FileInputStream("file.txt"));
+			st1 = (KapilSingleton) in.readObject();
+			in.close();
+
 			/**
 			 * Normal
 			 */
@@ -89,7 +96,7 @@ public class KapilSingleton implements Serializable, Cloneable {
 			/**
 			 * Cloneable
 			 */
-			// st1 = (KapilSingleton) st.clone();
+			st1 = (KapilSingleton) st.clone();
 			System.out.println("1 " + st.hashCode());
 			System.out.println("2 " + st1.hashCode());
 		} catch (Exception e) {
