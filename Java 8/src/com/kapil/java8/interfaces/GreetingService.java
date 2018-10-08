@@ -1,6 +1,6 @@
 package com.kapil.java8.interfaces;
 
-@FunctionalInterface
+@MyInt
 public interface GreetingService {
 	void sayMessage(String message);
 }
