@@ -16,9 +16,9 @@ public class UniqueString {
 	 */
 
 	public static void main(String[] args) {
-		String str = "abad";
-//		System.out.print(isUniqueString(str));
-		System.out.print(isUniqueBitVectorString(str));
+		String str = "abod";
+		System.out.print(isUniqueString(str));
+//		System.out.print(isUniqueBitVectorString(str));
 //		System.out.print(uniqueCharactersForLoop(str));
 //		System.out.println(uniqueCharactersSorted(str));
 	}
@@ -26,6 +26,7 @@ public class UniqueString {
 	/**
 	 * Time Complexity O(nlogn)
 	 */
+	@SuppressWarnings("unused")
 	private static boolean uniqueCharactersSorted(String str) {
 		/*
 		 * Convert the string to character array for sorting
@@ -46,6 +47,7 @@ public class UniqueString {
 	/**
 	 * Time Complexity O(n^2)
 	 */
+	@SuppressWarnings("unused")
 	private static boolean uniqueCharactersForLoop(String str) {
 
 		// If at any time we encounter 2 same
@@ -65,6 +67,7 @@ public class UniqueString {
 	/**
 	 * Time Complexity O(n)
 	 */
+	@SuppressWarnings("unused")
 	private static boolean isUniqueBitVectorString(String str) {
 		// Assuming string can have characters a-z
 		// this has 32 bits set to 0

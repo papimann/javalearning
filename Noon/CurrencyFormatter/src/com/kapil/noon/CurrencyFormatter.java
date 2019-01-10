@@ -10,7 +10,7 @@ public class CurrencyFormatter {
 
 	public static void main(String[] args) {
 		loadValues();
-		String curr = "1,02,001";
+		String curr = "102,001";
 		String[] hds = curr.split(",");
 		loadPlaceHolders(hds[hds.length - 2].length() == 2);
 		// TODO Auto-generated method stub

@@ -81,7 +81,7 @@ public class KapilSingleton implements Serializable, Cloneable {
 			/**
 			 * Serialization
 			 */
-
+ 
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.txt"));
 			out.writeObject(st);
 			out.close();

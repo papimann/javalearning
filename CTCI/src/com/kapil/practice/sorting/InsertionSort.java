@@ -10,14 +10,17 @@ public class InsertionSort {
 	}
 
 	private static void insertionSort(int[] arr) {
-
+		Arrays.stream(arr).forEach(System.out::print);
+		System.out.println();
 		for (int i = 1; i < arr.length; i++) {
 			for (int j = i; j > 0; j--) {
-				if (arr[j] < arr[j-1]) {
-					int temp = arr[j-1];
-					arr[j-1] = arr[j];
+				if (arr[j] < arr[j - 1]) {
+					int temp = arr[j - 1];
+					arr[j - 1] = arr[j];
 					arr[j] = temp;
 				}
+				Arrays.stream(arr).forEach(System.out::print);
+				System.out.println();
 			}
 		}
 		Arrays.stream(arr).forEach(System.out::print);

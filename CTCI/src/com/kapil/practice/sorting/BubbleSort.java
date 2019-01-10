@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		int[] arr = { 9, 6, 5, 4, 2, 1 };
+		int[] arr = { 9, 5, 4, 6, 2, 1 };
 		bubbleSort(arr);
 	}
 
@@ -21,6 +21,8 @@ public class BubbleSort {
 					arr[j + 1] = temp;
 					isSwap = true;
 				}
+				Arrays.stream(arr).forEach(System.out::print);
+				System.out.println();
 			}
 			Arrays.stream(arr).forEach(System.out::print);
 			System.out.println();
