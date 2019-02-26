@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myschooldb
+    username: root
+    password: Kapil44@
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      test-while-idle: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+security:
+  oauth2:
+    client:
+      access-token-uri: https://{yourOktaDomain}/oauth2/default/v1/token
+      user-authorization-uri: https://{yourOktaDomain}/oauth2/default/v1/authorize
+      client-id: ''
+      scope: openid profile email
+    resource:
+      user-info-uri: https://{yourOktaDomain}/oauth2/default/v1/userinfo
+      token-info-uri: https://{yourOktaDomain}/oauth2/default/v1/introspect
+      prefer-token-info: false

@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myschooldb
+    username: root
+    password: Kapil44@
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      test-while-idle: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: Student
+    schoolName: Shri Hari Kripa Public School
+  student:
+   api: http://localhost:8080/api/student

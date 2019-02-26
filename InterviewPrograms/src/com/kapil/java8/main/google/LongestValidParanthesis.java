@@ -14,7 +14,7 @@ public class LongestValidParanthesis {
 		Stack<Integer> stack = new Stack<>();
 		stack.push(-1);
 		for (int i = 0; i < str.length(); i++) {
-			System.out.println(str.charAt(i));
+			System.out.println("Stack "+stack);
 			if (str.charAt(i) == start) {
 				stack.push(i);
 				System.out.println("0 " + stack);

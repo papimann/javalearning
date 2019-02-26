@@ -42,8 +42,8 @@ public final class KapilImmutable {
 		h1.put("2", "second");
 		String s = "original";
 		int i = 10;
-		KapilImmutable ce = new KapilImmutable(i, s, h1, true);
-		System.out.println("Shallow Copy");
+		KapilImmutable ce = new KapilImmutable(i, s, h1, false);
+		System.out.println("DEep Shallow Copy");
 		System.out.println(s == ce.getName());
 		System.out.println(h1 == ce.getTestMap());
 		System.out.println("class id " + ce.getId());

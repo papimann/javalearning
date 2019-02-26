@@ -1,0 +1,75 @@
+<div th:include="header/header"></div>
+<div th:include="navigation/navigation"></div>
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1>Customer Form</h1>
+		<form action="#" th:action="@{add}" th:object="${student}"
+			method="post">
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+					<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" th:field="*{email}" /></td>
+					<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+
+				</tr>
+				<tr>
+					<td>Mobile:</td>
+					<td><input type="text" th:field="*{mobile}" /></td>
+					<td th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"></td>
+				</tr>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" th:field="*{firstName}" /></td>
+
+					<td th:if="${#fields.hasErrors('firstName')}"
+						th:errors="*{firstName}"></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" th:field="*{lastName}" /></td>
+					<td th:if="${#fields.hasErrors('lastName')}"
+						th:errors="*{lastName}"></td>
+				</tr>
+				<tr>
+					<td>Father Name:</td>
+					<td><input type="text" th:field="*{fatherName}" /></td>
+					<td th:if="${#fields.hasErrors('fatherName')}"
+						th:errors="*{fatherName}"></td>
+				</tr>
+				<tr>
+					<td>Mother Name:</td>
+					<td><input type="text" th:field="*{motherName}" /></td>
+					<td th:if="${#fields.hasErrors('motherName')}"
+						th:errors="*{motherName}"></td>
+				</tr>
+				<tr>
+					<td>Aadhar Number:</td>
+					<td><input type="text" th:field="*{aadhaarNumber}" /></td>
+					<td th:if="${#fields.hasErrors('aadhaarNumber')}"
+						th:errors="*{aadhaarNumber}"></td>
+				</tr>
+				<tr>
+					<td>Pan Card:</td>
+					<td><input type="text" th:field="*{panCard}" /></td>
+					<td th:if="${#fields.hasErrors('panCard')}" th:errors="*{panCard}"></td>
+				</tr>
+				<tr>
+					<td>Monthly Fees:</td>
+					<td><input type="text" th:field="*{monthlyFee}" /></td>
+					<td th:if="${#fields.hasErrors('monthlyFee')}"
+						th:errors="*{monthlyFee}"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit" /></td>
+					<td><input type="reset" value="Reset" /></td>
+				</tr>
+			</table>
+		</form>
+	</section>
+</div>
+<div th:include="footer/footer"></div>

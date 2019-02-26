@@ -62,7 +62,7 @@ public class RepeatingArray {
 	public static void main(String[] args) {
 		RepeatingArray repeat = new RepeatingArray();
 		int[] arr = { 1, 3, 4, 2, 4, 2, 4, 5, 5 };
-		repeat.findDuplicateInArray(arr);
+		repeat.findRepeats(arr);
 	}
 
 }

@@ -3,7 +3,7 @@ package com.kapil.java8.main.google;
 public class JumpingNumbers {
 
 	public static void main(String[] args) {
-		findJumpingNumbers(4343456);
+		findJumpingNumbers(400);
 	}
 
 	private static void findJumpingNumbers(int max) {

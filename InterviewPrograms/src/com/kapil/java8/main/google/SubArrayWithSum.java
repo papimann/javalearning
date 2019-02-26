@@ -15,15 +15,16 @@ public class SubArrayWithSum {
 	public static void main(String[] args) {
 		int arr[] = { 15, 2, 4, 8, 9, 5, 10, 23 };
 		int length = arr.length;
-		int sum = 20;
-		findSubArrayWithSumBFM(arr, length, sum);
-		sum = 23;
+		int sum = 15;
+		//findSubArrayWithSumBFM(arr, length, sum);
+		sum = 34;
 		findSubArrayWithSumEFM(arr, length, sum);
 	}
 
 	/**
 	 * Time Complexity - O(n^2) Brute Force Mechanism
 	 */
+	@SuppressWarnings("unused")
 	private static void findSubArrayWithSumBFM(int[] arr, int length, int sum) {
 		int currSum;
 		for (int i = 0; i < length; i++) {

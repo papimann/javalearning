@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.kapil.upload",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.1",
+        "applicationType": "monolith",
+        "baseName": "upload",
+        "packageName": "com.kapil.upload",
+        "packageFolder": "com/kapil/upload",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": false,
+        "serviceDiscoveryType": "eureka",
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "Y2I1N2I3MTQ1MmI2MGMxMDNlN2EzM2I0M2YwOWFmZjEyMDViMGMwZmI4N2JkZmU2MmRjM2JmZGFiNDhjZGU5MTg0ZWU4YWNiMWU4N2ZjMDY5YTBhMmQ2OThkN2JkZTc4YjA4NGM1OWYxZDk5MjkzNzJiZGRjYjI4OGIzZDZkZWQ=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en"]
+    }
+}

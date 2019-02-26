@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="Google Web Designer 2.0.2.1128">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title th:text="${schoolName}"></title>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/AdminLTE.min.css">
+<link rel="stylesheet" href="/css/skins/_all-skins.min.css">
+
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+	<header class="main-header">
+		<nav class="navbar navbar-static-top text-center"
+			style="margin: 0px; color: #fff">
+			<h3 class="text-white">
+				<b th:text="${schoolName}"></b>
+			</h3>
+		</nav>
+	</header>
+
+	<div class="content-wrapper" style="margin: 0;">
+
+		<section class="content" style="max-width: 600px;">
+
+			<div class="box box-primary">
+				<div class="well">
+
+					<div>
+
+						<div class="login-reg-tab-wrapper">
+							<div class="tab-content login-reg-tabs-content">
+
+								<div id="login-reg-tab-login" class="tab-pane fade in active  ">
+									<div class="box-header with-border">
+										<h3>Login !</h3>
+									</div>
+									<div>
+
+										<form action="/userlogin" method="POST" name="loginForm"
+											id="loginForm" class="cssform login-reg-form"
+											autocomplete="off" role="form"
+											onsubmit="return onLoginSubmit()">
+
+											<div class="form-group form-group-lg fieldcontain required">
+												<label for="loginusername" class="reqd"> Username <span>*</span>
+												</label> <input type="text" class="text_ form-control bor-rad-0"
+													name="username" id="loginusername" autocomplete="off"
+													placeholder="Your Email" required=""
+													title="for e.g. emailadress@website.com or your mobile number"
+													onchange="validateUsername(this)"
+													oninvalid="validateUsername(this)"
+													oninput="setCustomValidity('')"
+													onvalid="setCustomValidity('')"
+													data-validationmsg="Please enter your email address or mobile number."
+													pattern="[0-9]{10}" maxlength="10" minlength="10">
+											</div>
+
+											<script type="text/javascript">
+												var elem = document
+														.getElementById('loginusername');
+												function onLoginSubmit() {
+													return validateUsername(elem);
+												}
+												elem.onkeyup = function() {
+													validateUsername(this)
+												}
+											</script>
+
+											<div class="form-group form-group-lg fieldcontain required">
+												<label for="password" class="reqd"> Password <span>*</span>
+												</label> <input type="password"
+													class=" text_ form-control bor-rad-0" name="password"
+													id="password" placeholder="Your Passcode" required=""
+													title="for e.g. emailadress@website.com or your mobile number"
+													maxlength="4"
+													oninvalid="setCustomValidity('Please enter your passcode.')"
+													oninput="setCustomValidity('')"
+													data-validationmsg="Please enter your passcode.">
+											</div>
+
+											<div class="form-group form-group-lg fieldcontain required"
+												id="remember_me_holder">
+												<input type="checkbox" class="chk"
+													name="_spring_security_remember_me" id="remember_me"
+													checked="checked"> <label for="remember_me">
+													Remember me </label> <a href="javascript:void(0);"
+													class="btn btn-link btn-sm navbar-btn push-right p-0 m-0"
+													id="resetPasswordLink" data-target="#forgotPassword"
+													data-toggle="modal"> Forgot Password? </a>
+											</div>
+
+											<div
+												class="form-group form-group-lg fieldcontain required text-center">
+												<input type="submit" id="submit" value="Login"
+													class="btn btn-lg btn-primary ltd-btn-primary w100" /> <a
+													data-toggle="tab" class="pull-right"
+													href="#login-reg-tab-reg">Register Here!</a>
+											</div>
+
+										</form>
+										<div class="callout callout-danger">Username and
+											password does not match, please provide valid username and
+											password to login</div>
+
+
+									</div>
+								</div>
+
+
+								<div id="login-reg-tab-reg" class="tab-pane fade in dayRows">
+									<div class="box-header with-border">
+										<h3>Register !</h3>
+									</div>
+									<div>
+										<form action="/register" method="post" role="form"
+											name="userForm" class="login-reg-form" id="registration-val"
+											autocomplete="off">
+
+											<div class="form-group form-group-lg fieldcontain  required">
+												<label for="firstName" class="reqd"> First Name <span>*</span>
+												</label> <input type="text" class="form-control bor-rad-0"
+													name="name" required="" value="" maxlength="150"
+													oninvalid="setCustomValidity(&#39;Please enter your first name.&#39;)"
+													onfocusout="validateEmptyValue(this,&#39;Please enter your first name.&#39;)"
+													autocomplete="off"
+													data-validationmsg="Please enter your first name."
+													id="firstName" />
+											</div>
+
+											<div class="form-group form-group-lg fieldcontain  required">
+												<label for="mobile" class="reqd"> Mobile <span>*</span>
+												</label> <input type="text" class="form-control bor-rad-0"
+													name="mobile" required="true" value="" maxlength="10"
+													oninvalid="setCustomValidity(&#39;Please enter your 10 digit mobile number.&#39;)"
+													oninput="validateNumber(this,&#39;Phone Number&#39;,10,10,&#39;Please enter correct value for your&#39;)"
+													autocomplete="off"
+													data-validationmsg="Please enter your 10 digit mobile number."
+													id="mobile" />
+											</div>
+
+											<div class="form-group form-group-lg fieldcontain  ">
+												<label for="username"> Email </label> <input type="text"
+													class="form-control bor-rad-0" name="userName" value=""
+													maxlength="150" autocomplete="off"
+													oninvalid="setCustomValidity(&#39;Please enter your username/email.&#39;)"
+													oninput="validateEmail(this, &#39;Please enter your username/email.&#39;)"
+													data-validationmsg="Please enter your username/email."
+													id="username" />
+											</div>
+
+											<div class="form-group form-group-lg fieldcontain  required">
+												<label for="password" class="reqd"> Password <span>*</span>
+												</label> <input type="password" class="form-control bor-rad-0"
+													name="password" required="true" value="" id="numbersonly"
+													autocomplete="off"
+													oninvalid="setCustomValidity(&#39;Please enter your passcode.&#39;)"
+													oninput="this.setCustomValidity('')"
+													data-validationmsg="Please enter your passcode." />
+											</div>
+
+
+											<div>
+												<button type="submit"
+													class="btn btn-primary ltd-btn-primary w100">
+													Register</button>
+												<a data-toggle="tab" class="pull-right"
+													href="#login-reg-tab-login">Login Here</a>
+										</form>
+										<div class="callout callout-danger">Username already
+											taken by someone else, please try some other text for
+											username.</div>
+
+
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+	</div>
+
+
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">
+			<b>Version</b> 0.0.1
+		</div>
+		<strong>Copyright &copy; <a
+			href="https://www.lockthedeal.com">LockTheDeal.com</a>
+		</strong> All rights reserved.
+	</footer>
+
+	<!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+	<div class="control-sidebar-bg"></div>
+	</div>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery-ui.min.js"></script>
+	<script src="/js/utilities.js"></script>
+	<script>
+		$.widget.bridge('uibutton', $.ui.button);
+	</script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/daterangepicker.js"></script>
+	<script src="/js/bootstrap-datepicker.min.js"></script>
+	<script src="/js/adminlte.min.js"></script>
+	<style>
+.small-box-footer {
+	text-align: left !important;
+	padding: 15px !important;
+}
+</style>
+</body>
+</html>
